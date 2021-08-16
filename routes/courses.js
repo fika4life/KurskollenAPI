@@ -1,18 +1,16 @@
 const express = require('express');
+const {
+  getCourses,
+  getCourse,
+  createCourse,
+  updateCourse,
+  deleteCourse
+} = require('../controllers/courses');
+
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Show all courses' });
-});
+router.route('/').get(getCourses).post(createCourse);
 
-router.post('/', (req, res) => {
-  res.status(200).json({ success: true, msg: 'Create new course' });
-});
-
-router.get('/:id', (req, res) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Get course with id of ${req.params.id}` });
-});
+router.route('/:id').get(getCourse).put(updateCourse).delete(deleteCourse);
 
 module.exports = router;
