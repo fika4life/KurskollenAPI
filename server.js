@@ -12,6 +12,9 @@ connectDB();
 
 const app = express();
 
+//Body Parser
+app.use(express.json());
+
 //mount router
 app.use('/courses', courses);
 
