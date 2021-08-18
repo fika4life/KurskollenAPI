@@ -10,34 +10,18 @@
       "averageRating": "",
       "reviews": [
         {
+          "user": "611bfd7522639f79ddb65f331",
           "rating": 4,
           "title": "Best course ever",
           "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
-          "timestamp": "2021-07-24T18:49:40.662Z"
+          "createdAt": "2021-07-24T18:49:40.662Z"
         },
         {
-          "rating": 3,
-          "title": "ok",
-          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
-          "timestamp": "2021-07-24T18:49:40.662Z"
-        },
-        {
-          "rating": 2,
-          "title": "bleh",
-          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
-          "timestamp": "2021-07-24T18:49:40.662Z"
-        },
-        {
-          "rating": 5,
-          "title": "Kanonbra",
-          "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
-          "timestamp": "2021-07-24T18:49:40.662Z"
-        },
-        {
+          "user": "611bfd7522639f79ddb65f331",
           "rating": 1,
-          "title": "Nja",
+          "title": "Worst course ever",
           "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie aenean ut tristique ridiculus consequat in. Morbi cras imperdiet risus laoreet. Consectetur egestas pretium pellentesque mollis urna pharetra. Pellentesque ut posuere eget sed odio et pellentesque.",
-          "timestamp": "2021-07-24T18:49:40.663Z"
+          "createdAt": "2021-07-24T18:49:40.662Z"
         }
       ]
     },

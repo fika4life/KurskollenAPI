@@ -5,7 +5,9 @@ const Course = require('../models/Course');
 exports.getCourses = async (req, res, next) => {
   try {
     const courses = await Course.find();
-    res.status(200).json({ success: true, data: courses });
+    res
+      .status(200)
+      .json({ success: true, count: courses.length, data: courses });
   } catch (err) {
     res.status(400).json({ success: false });
   }
@@ -49,17 +51,34 @@ exports.createCourse = async (req, res, next) => {
 // @desc         Update course
 // @route        PUT /courses
 // @access       Private
-exports.updateCourse = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Updated course with id of ${req.params.id}` });
+exports.updateCourse = async (req, res, next) => {
+  try {
+    const course = await Course.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+      runValidators: true
+    });
+
+    if (!course) {
+      return res.status(400).json({ success: false });
+    }
+    res.status(200).json({ success: true, data: course });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
 };
 
 // @desc         Delete course
 // @route        DELETE /courses/:id
 // @access       Private
-exports.deleteCourse = (req, res, next) => {
-  res
-    .status(200)
-    .json({ success: true, msg: `Deleted course with id of ${req.params.id}` });
+exports.deleteCourse = async (req, res, next) => {
+  try {
+    const course = await Course.findByIdAndDelete(req.params.id);
+
+    if (!course) {
+      return res.status(400).json({ success: false });
+    }
+    res.status(200).json({ success: true, data: {} });
+  } catch (err) {
+    res.status(400).json({ success: false });
+  }
 };
