@@ -150,7 +150,8 @@ a.navbar-brand {
   padding: 7px 6px;
 }
 
-.nav-item a:active {
+.nav-item a:active,
+.nav-item a.active {
   background: linear-gradient(
     180deg,
     rgba(255, 255, 255, 0) 50%,

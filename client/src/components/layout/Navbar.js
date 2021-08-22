@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
   return (
@@ -7,36 +8,36 @@ const Navbar = () => {
         <nav className="navbar">
           <ul className="nav-items">
             <li className="nav-item">
-              <a className="navbar-brand" href="/">
+              <NavLink className="navbar-brand" to="/">
                 KURSKOLLEN
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <NavLink exact className="nav-link" to="/">
                 Sök
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/search-results">
+              <NavLink exact className="nav-link" to="/search-results">
                 Results
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/write-review">
+              <NavLink exact className="nav-link" to="/write-review">
                 Skriv omdöme
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/login">
+              <NavLink exact className="nav-link" to="/login">
                 Logga in
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a href="/register">
+              <NavLink exact to="/register">
                 <button className="button nav-button" type="submit">
                   Registrera
                 </button>
-              </a>
+              </NavLink>
             </li>
           </ul>
         </nav>
